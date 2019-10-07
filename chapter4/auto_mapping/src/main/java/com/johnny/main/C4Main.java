@@ -15,7 +15,7 @@ public class C4Main {
         try {
             sqlSession = SqlSessionFactoryUtil.openSqlSession();
             RoleDao userDao = sqlSession.getMapper(RoleDao.class);
-            System.out.println(userDao.getRole(2L));
+            System.out.println(userDao.getRole(1L));
             //roleMapper.deleteRole(1L);
             //sqlSession.commit();
         } catch (Exception e) {

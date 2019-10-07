@@ -21,9 +21,9 @@ public class C4Main {
         try {
             sqlSession = SqlSessionFactoryUtil.openSqlSession();
             RoleDao roleDao = sqlSession.getMapper(RoleDao.class);
-            System.out.println(roleDao.getRole(5).toString());
+            System.out.println(roleDao.getRole(3).toString());
             System.out.println("-------------------------------------------------------------->");
-            roleDao.findRoleByNote(5).forEach((y, z) -> System.out.println(y + "--->" + z));
+            roleDao.findRoleByNote(3).forEach((y, z) -> System.out.println(y + "--->" + z));
             System.out.println("-------------------------------------------------------------->");
         } catch (Exception e) {
             e.printStackTrace();

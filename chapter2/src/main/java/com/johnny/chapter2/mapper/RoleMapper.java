@@ -1,5 +1,7 @@
 package com.johnny.chapter2.mapper;
 
+import java.util.List;
+
 import com.johnny.chapter2.po.Role;
 
 /**
@@ -8,6 +10,8 @@ import com.johnny.chapter2.po.Role;
  */
 public interface RoleMapper {
     Role getRole(Long id);
+    
+    List<Role> getRoles(Long id);
 
     int deleteRole(Long id);
 

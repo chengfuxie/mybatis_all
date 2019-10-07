@@ -24,6 +24,9 @@ public class C4Main {
             StudentDao studentDao = sqlSession.getMapper(StudentDao.class);
             Student student = studentDao.getStudent(1);
             System.out.println(student.getStudentLectureList());
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+            sqlSession.rollback();
         } finally {
             if (sqlSession != null) {
                 sqlSession.close();

@@ -30,5 +30,7 @@
     <!-- 定义映射器 -->
     <mappers>
         <mapper resource="com/johnny/chapter2/mapper/roleMapper.xml"/>
+        <mapper resource="com/johnny/chapter2/mapper/OrderInspectorDoubleMissionMapper.xml"/>
+        <mapper resource="com/johnny/chapter2/mapper/ApplicationMapper.xml"/>
     </mappers>
 </configuration>

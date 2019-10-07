@@ -7,6 +7,7 @@
 
     <groupId>com.johnny</groupId>
     <artifactId>mybatis_all</artifactId>
+	<packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -14,6 +15,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+	<!--
     <modules>
         <module>chapter2</module>
         <module>chapter4</module>
@@ -21,7 +23,8 @@
         <module>chapter6</module>
         <module>chapter7</module>
     </modules>
-
+    -->
+	
     <dependencies>
         <dependency>
             <groupId>org.mybatis</groupId>
@@ -36,13 +39,21 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.6</version>
+            <version>8.0.17</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.20</version>
         </dependency>
+		
+		
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<scope>test</scope>
+			<version>10.2.0.5.0</version>
+		</dependency>		
     </dependencies>
 
     <build>
@@ -65,6 +76,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>

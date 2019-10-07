@@ -31,14 +31,16 @@ public class C4Main {
             Student student2 = studentDao1.getStudent(1);
             // 请注意,当我们使用二级缓存的时候,sqlSession调用了commit方法后才会生效
             sqlSession2.commit();
-        } finally {
-            if (sqlSession != null) {
-                sqlSession.close();
-            }
-            if (sqlSession2 != null) {
-                sqlSession2.close();
-            }
-        }
+		} catch (Exception e) {
+			System.err.println(e.getStackTrace());
+		} finally {
+			if (sqlSession != null) {
+				sqlSession.close();
+			}
+			if (sqlSession2 != null) {
+				sqlSession2.close();
+			}
+		}
         logger.info("执行成功!");
     }
 }

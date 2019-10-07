@@ -21,13 +21,13 @@ public class C4Main {
             sqlSession = SqlSessionFactoryUtil.openSqlSession();
             RoleDao roleDao = sqlSession.getMapper(RoleDao.class);
             Role param = new Role();
-            param.setId(2);
+            param.setId(3);
             param.setRoleName("12222");
             param.setNote("3333");
             roleDao.updateRole(param);
             roleDao.selectAllData().forEach(x -> System.out.println(x.toString()));
             System.out.println("-------------------------------------------------------------->");
-            roleDao.deleteRole(2);
+            roleDao.deleteRole(3);
             roleDao.selectAllData().forEach(x -> System.out.println(x.toString()));
             System.out.println("-------------------------------------------------------------->");
         } catch (Exception e) {

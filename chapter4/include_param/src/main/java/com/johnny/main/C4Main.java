@@ -26,9 +26,9 @@ public class C4Main {
             param.setId(2);
             param.setRoleName("me111123123459");
             param.setNote("te22upouidateaer");
-            System.out.println(roleDao.getRole(5).toString());
+            System.out.println(roleDao.getRole(1).toString());
             System.out.println("-------------------------------------------------------------->");
-            System.out.println(roleDao.getRoleCustom(5).toString());
+            System.out.println(roleDao.getRoleCustom(3).toString());
             System.out.println("-------------------------------------------------------------->");
             Map<String, String> maps = new HashMap<>(2);
             maps.put("roleName", "me");

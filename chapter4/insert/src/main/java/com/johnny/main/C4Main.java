@@ -24,6 +24,8 @@ public class C4Main {
             param.setNote("te22");
             System.out.println(roleDao.insertRole(param));
             System.out.println(param.getId());
+            
+            sqlSession.commit();
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getMessage());

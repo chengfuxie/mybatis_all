@@ -30,15 +30,15 @@ public class C5Main {
         sqlSession = SqlSessionFactoryUtil.openSqlSession();
         RoleDao roleDao = sqlSession.getMapper(RoleDao.class);
 
-        execute52(roleDao);
+//        execute52(roleDao);
 
-        execute53(roleDao);
+//        execute53(roleDao);
 
-        execute54(roleDao, sqlSession);// 会发生更新,请关注代码.
+//        execute54(roleDao, sqlSession);// 会发生更新,请关注代码.
 
-        execute55(sqlSession);// 代码文件在UserDao.xml
+//        execute55(sqlSession);// 代码文件在UserDao.xml
 
-        execute56(roleDao);
+//        execute56(roleDao);
 
         execute57(roleDao);
 
@@ -55,6 +55,7 @@ public class C5Main {
         System.out.println("---------5.3----------->");
         roleDao.findChooseWhenOtherWise("4", "test").forEach(x -> System.out.println(x.toString()));
         roleDao.findChooseWhenOtherWise("", "test").forEach(x -> System.out.println(x.toString()));
+        roleDao.findChooseWhenOtherWise("", "").forEach(x -> System.out.println(x.toString()));
         System.out.println("---------5.3end----------->");
     }
 
